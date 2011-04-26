@@ -4,7 +4,7 @@
 
 //fwrite(STDERR, $line . "\n");
 
-fwrite(STDOUT, "RobotOption USE_NON_BLOCKING 1\n");
+fwrite(STDOUT, "RobotOption USE_NON_BLOCKING 0\n");
 
 do
 {
