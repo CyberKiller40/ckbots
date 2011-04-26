@@ -2,11 +2,14 @@
 
 <?php
 
+//fwrite(STDERR, $line . "\n");
+
 fwrite(STDOUT, "RobotOption USE_NON_BLOCKING 0\n");
 
 do
 {
 	$line=trim(fgets(STDIN));
+	fwrite(STDERR, $line . "\n");
 }
 while($line!="Initialize 1");
 
@@ -21,6 +24,7 @@ while($line!="Initialize 1");
 		fwrite(STDOUT, "RotateAmount 7 15 1\n");
 
 		$line=trim(fgets(STDIN));
+		fwrite(STDERR, $line . "\n");
 	}
 
 ?>
