@@ -27,9 +27,11 @@ do
 }
 while($line!="GameStarts");
 
+$rotatenum=0;
+
 	while(($line!="GameFinishes")||($line!="Dead")||($line!="ExitRobot"))
 	{
-		fwrite(STDOUT, "Accelerate 10\n");
+		fwrite(STDOUT, "Accelerate 3\n");
 		sleep(1);
 		fwrite(STDOUT, "Shoot 10\n");
 		
@@ -39,6 +41,14 @@ while($line!="GameStarts");
 
 		$line=trim(fgets(STDIN));
 		fwrite(STDERR, $line . "\n");
+		
+		$rotatenum++;
+		if($rotatenum>9)
+		{
+			fwrite(STDOUT, "RotateAmount 1 15 " . pi() . "\n");
+		}
+		
+		
 	}
 
 ?>
