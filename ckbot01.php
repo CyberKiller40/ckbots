@@ -27,28 +27,9 @@ while($line!="GameStarts");
 	{
 		fwrite(STDOUT, "Accelerate 10\n");
 		sleep(1);
-		for($i=0;$i<3;$i++)
-		{
-			fwrite(STDOUT, "Shoot 10\n");
-			fwrite(STDOUT, "RotateAmount 2 30 0.01\n");
-		}
-		for($i=0;$i<3;$i++)
-		{
-			fwrite(STDOUT, "Shoot 10\n");
-			fwrite(STDOUT, "RotateAmount 2 30 -0.01\n");
-		}
-		for($i=0;$i<3;$i++)
-		{
-			fwrite(STDOUT, "Shoot 10\n");
-			fwrite(STDOUT, "RotateAmount 2 30 -0.01\n");
-		}
-		for($i=0;$i<3;$i++)
-		{
-			fwrite(STDOUT, "Shoot 10\n");
-			fwrite(STDOUT, "RotateAmount 2 30 0.01\n");
-		}
+		fwrite(STDOUT, "Shoot 10\n");
 		
-		$kat=(rand(0,6))-3;
+		$kat=((rand(0,60))-30)/10;
 		
 		fwrite(STDOUT, "RotateAmount 1 15 " . $kat . "\n");
 
