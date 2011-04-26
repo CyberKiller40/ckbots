@@ -13,8 +13,15 @@ do
 }
 while($line!="Initialize 1");
 
-	fwrite(STDOUT, "Name CKbot01\n");
-	fwrite(STDOUT, "Colour 0000FF 0000FE\n");
+fwrite(STDOUT, "Name CKbot01\n");
+fwrite(STDOUT, "Colour 0000FF 0000FE\n");
+
+do
+{
+	$line=trim(fgets(STDIN));
+	fwrite(STDERR, $line . "\n");
+}
+while($line!="GameStarts");
 
 	while(($line!="GameFinishes")||($line=="Dead")||($line=="ExitRobot"))
 	{
