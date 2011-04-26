@@ -27,22 +27,22 @@ while($line!="GameStarts");
 	{
 		fwrite(STDOUT, "Accelerate 10\n");
 		sleep(1);
-		for(i=0;i<3;i++)
+		for($i=0;$i<3;$i++)
 		{
 			fwrite(STDOUT, "Shoot 10\n");
 			fwrite(STDOUT, "RotateAmount 2 15 0.1\n");
 		}
-		for(i=0;i<3;i++)
+		for($i=0;$i<3;$i++)
 		{
 			fwrite(STDOUT, "Shoot 10\n");
 			fwrite(STDOUT, "RotateAmount 2 15 -0.1\n");
 		}
-		for(i=0;i<3;i++)
+		for($i=0;$i<3;$i++)
 		{
 			fwrite(STDOUT, "Shoot 10\n");
 			fwrite(STDOUT, "RotateAmount 2 15 -0.1\n");
 		}
-		for(i=0;i<3;i++)
+		for($i=0;$i<3;$i++)
 		{
 			fwrite(STDOUT, "Shoot 10\n");
 			fwrite(STDOUT, "RotateAmount 2 15 0.1\n");
