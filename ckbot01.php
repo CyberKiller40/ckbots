@@ -27,8 +27,28 @@ while($line!="GameStarts");
 	{
 		fwrite(STDOUT, "Accelerate 10\n");
 		sleep(1);
-		fwrite(STDOUT, "Shoot 10\n");
-		fwrite(STDOUT, "RotateAmount 7 15 1\n");
+		for(i=0;i<3;i++)
+		{
+			fwrite(STDOUT, "Shoot 10\n");
+			fwrite(STDOUT, "RotateAmount 2 15 0.1\n");
+		}
+		for(i=0;i<3;i++)
+		{
+			fwrite(STDOUT, "Shoot 10\n");
+			fwrite(STDOUT, "RotateAmount 2 15 -0.1\n");
+		}
+		for(i=0;i<3;i++)
+		{
+			fwrite(STDOUT, "Shoot 10\n");
+			fwrite(STDOUT, "RotateAmount 2 15 -0.1\n");
+		}
+		for(i=0;i<3;i++)
+		{
+			fwrite(STDOUT, "Shoot 10\n");
+			fwrite(STDOUT, "RotateAmount 2 15 0.1\n");
+		}
+		
+		fwrite(STDOUT, "RotateAmount 1 15 1.2\n");
 
 		$line=trim(fgets(STDIN));
 		fwrite(STDERR, $line . "\n");
