@@ -48,7 +48,9 @@ while($line!="GameStarts");
 			fwrite(STDOUT, "RotateAmount 2 30 0.01\n");
 		}
 		
-		fwrite(STDOUT, "RotateAmount 1 15 1.2\n");
+		$kat=(rand(0,6))-3;
+		
+		fwrite(STDOUT, "RotateAmount 1 15 " . $kat . "\n");
 
 		$line=trim(fgets(STDIN));
 		fwrite(STDERR, $line . "\n");
