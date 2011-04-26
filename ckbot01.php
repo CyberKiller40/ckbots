@@ -11,10 +11,14 @@ do
 	$line=trim(fgets(STDIN));
 	fwrite(STDERR, $line . "\n");
 }
-while($line!="Initialize 1");
+while(substr($line,0,10)!="Initialize");
 
-fwrite(STDOUT, "Name CKbot01\n");
-fwrite(STDOUT, "Colour 0000FF 0000FE\n");
+if($line=="Initialize 1")
+{
+	fwrite(STDERR, "This should set the name :-P\n");
+	fwrite(STDOUT, "Name CKbot01\n");
+	fwrite(STDOUT, "Colour 0000FF 0000FE\n");
+}
 
 do
 {
@@ -23,7 +27,7 @@ do
 }
 while($line!="GameStarts");
 
-	while(($line!="GameFinishes")||($line=="Dead")||($line=="ExitRobot"))
+	while(($line!="GameFinishes")||($line!="Dead")||($line!="ExitRobot"))
 	{
 		fwrite(STDOUT, "Accelerate 10\n");
 		sleep(1);
