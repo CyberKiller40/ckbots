@@ -1,11 +1,11 @@
 package CKbots;
 import robocode.*;
-//import java.awt.Color;
+import java.awt.Color;
 
 // API help : http://robocode.sourceforge.net/docs/robocode/robocode/Robot.html
 
 /**
- * CKbot03 - a robot by (your name here)
+ * CKbot03 - a robot by Cyber Killer
  */
 public class CKbot03 extends Robot
 {
@@ -18,14 +18,13 @@ public class CKbot03 extends Robot
 		// After trying out your robot, try uncommenting the import at the top,
 		// and the next line:
 
-		// setColors(Color.red,Color.blue,Color.green); // body,gun,radar
+		setColors(Color.blue,Color.blue,Color.blue); // body,gun,radar
 
 		// Robot main loop
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
-			ahead(100);
-			turnGunRight(360);
-			back(100);
+			ahead(15);
+			turnRight(45);
 			turnGunRight(360);
 		}
 	}
@@ -43,7 +42,7 @@ public class CKbot03 extends Robot
 	 */
 	public void onHitByBullet(HitByBulletEvent e) {
 		// Replace the next line with any behavior you would like
-		back(10);
+		ahead(50);
 	}
 	
 	/**
@@ -51,6 +50,7 @@ public class CKbot03 extends Robot
 	 */
 	public void onHitWall(HitWallEvent e) {
 		// Replace the next line with any behavior you would like
-		back(20);
+		back(40);
+		turnRight(90);
 	}	
 }
