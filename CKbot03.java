@@ -25,6 +25,9 @@ public class CKbot03 extends Robot
 			// Replace the next 4 lines with any behavior you would like
 			ahead(15);
 			turnRight(45);
+			ahead(15);
+			turnGunRight(360);
+			back(30);
 			turnGunRight(360);
 		}
 	}
