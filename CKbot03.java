@@ -38,7 +38,6 @@ public class CKbot03 extends Robot
 	public void onScannedRobot(ScannedRobotEvent e) {
 		// Replace the next line with any behavior you would like
 		fire(3);
-		fire(3);
 	}
 
 	/**
