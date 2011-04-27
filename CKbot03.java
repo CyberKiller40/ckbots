@@ -23,11 +23,11 @@ public class CKbot03 extends Robot
 		// Robot main loop
 		while(true) {
 			// Replace the next 4 lines with any behavior you would like
-			ahead(15);
+			ahead(50);
 			turnRight(45);
-			ahead(15);
+			ahead(50);
 			turnGunRight(360);
-			back(30);
+			back(50);
 			turnGunRight(360);
 		}
 	}
@@ -45,7 +45,7 @@ public class CKbot03 extends Robot
 	 */
 	public void onHitByBullet(HitByBulletEvent e) {
 		// Replace the next line with any behavior you would like
-		ahead(50);
+		ahead(150);
 	}
 	
 	/**
@@ -55,5 +55,6 @@ public class CKbot03 extends Robot
 		// Replace the next line with any behavior you would like
 		back(40);
 		turnRight(90);
+		ahead(40);
 	}	
 }
